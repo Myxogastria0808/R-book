@@ -243,56 +243,156 @@
 			box-sizing: border-box;
   }
 
-  .loader {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border: 4px solid #240229;
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1),
-      10px 10px 10px rgba(0, 0, 0, 0.4),
-      inset -5px -5px 5px rgba(255, 255, 255, 0.2),
-      inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+/*-------------------------------------------------------------------------*/
+main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #090707;
   }
   
-  .loader:before {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-    z-index: 10;
-    background: #282828;
-    border-radius: 50%;
-    border: 2px solid #240229;
-    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
-      inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+  .dank-ass-loader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  .dank-ass-loader .row {
+	display: flex;
   }
   
-  .loader span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-image: linear-gradient(
-      -225deg,
-      #ff7402 0%,
-      #ffe700 50%,
-      #fff55e 100%
-    );
-  
-    filter: blur(20px);
-    z-index: -1;
-    animation: animate 0.5s linear infinite;
+  .arrow {
+	width: 0;
+	height: 0;
+	margin: 0 -6px;
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	border-bottom: 21.6px solid #fd7000;
+	-webkit-animation: blink 1s infinite;
+			animation: blink 1s infinite;
+	filter: drop-shadow(0 0 18px #fd7000);
+  }
+  .arrow.down {
+	transform: rotate(180deg);
+  }
+  .arrow.outer-1 {
+	-webkit-animation-delay: -0.0555555556s;
+			animation-delay: -0.0555555556s;
+  }
+  .arrow.outer-2 {
+	-webkit-animation-delay: -0.1111111111s;
+			animation-delay: -0.1111111111s;
+  }
+  .arrow.outer-3 {
+	-webkit-animation-delay: -0.1666666667s;
+			animation-delay: -0.1666666667s;
+  }
+  .arrow.outer-4 {
+	-webkit-animation-delay: -0.2222222222s;
+			animation-delay: -0.2222222222s;
+  }
+  .arrow.outer-5 {
+	-webkit-animation-delay: -0.2777777778s;
+			animation-delay: -0.2777777778s;
+  }
+  .arrow.outer-6 {
+	-webkit-animation-delay: -0.3333333333s;
+			animation-delay: -0.3333333333s;
+  }
+  .arrow.outer-7 {
+	-webkit-animation-delay: -0.3888888889s;
+			animation-delay: -0.3888888889s;
+  }
+  .arrow.outer-8 {
+	-webkit-animation-delay: -0.4444444444s;
+			animation-delay: -0.4444444444s;
+  }
+  .arrow.outer-9 {
+	-webkit-animation-delay: -0.5s;
+			animation-delay: -0.5s;
+  }
+  .arrow.outer-10 {
+	-webkit-animation-delay: -0.5555555556s;
+			animation-delay: -0.5555555556s;
+  }
+  .arrow.outer-11 {
+	-webkit-animation-delay: -0.6111111111s;
+			animation-delay: -0.6111111111s;
+  }
+  .arrow.outer-12 {
+	-webkit-animation-delay: -0.6666666667s;
+			animation-delay: -0.6666666667s;
+  }
+  .arrow.outer-13 {
+	-webkit-animation-delay: -0.7222222222s;
+			animation-delay: -0.7222222222s;
+  }
+  .arrow.outer-14 {
+	-webkit-animation-delay: -0.7777777778s;
+			animation-delay: -0.7777777778s;
+  }
+  .arrow.outer-15 {
+	-webkit-animation-delay: -0.8333333333s;
+			animation-delay: -0.8333333333s;
+  }
+  .arrow.outer-16 {
+	-webkit-animation-delay: -0.8888888889s;
+			animation-delay: -0.8888888889s;
+  }
+  .arrow.outer-17 {
+	-webkit-animation-delay: -0.9444444444s;
+			animation-delay: -0.9444444444s;
+  }
+  .arrow.outer-18 {
+	-webkit-animation-delay: -1s;
+			animation-delay: -1s;
+  }
+  .arrow.inner-1 {
+	-webkit-animation-delay: -0.1666666667s;
+			animation-delay: -0.1666666667s;
+  }
+  .arrow.inner-2 {
+	-webkit-animation-delay: -0.3333333333s;
+			animation-delay: -0.3333333333s;
+  }
+  .arrow.inner-3 {
+	-webkit-animation-delay: -0.5s;
+			animation-delay: -0.5s;
+  }
+  .arrow.inner-4 {
+	-webkit-animation-delay: -0.6666666667s;
+			animation-delay: -0.6666666667s;
+  }
+  .arrow.inner-5 {
+	-webkit-animation-delay: -0.8333333333s;
+			animation-delay: -0.8333333333s;
+  }
+  .arrow.inner-6 {
+	-webkit-animation-delay: -1s;
+			animation-delay: -1s;
   }
   
-  @keyframes animate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  @-webkit-keyframes blink {
+	0% {
+	  opacity: 0.1;
+	}
+	30% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0.1;
+	}
+  }
+  
+  @keyframes blink {
+	0% {
+	  opacity: 0.1;
+	}
+	30% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0.1;
+	}
   }
